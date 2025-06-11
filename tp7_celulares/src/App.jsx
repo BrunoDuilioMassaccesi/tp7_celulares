@@ -1,16 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout.jsx';
+import Home from './pages/Home.jsx';
+import QuienesSomos from './pages/QuienesSomos.jsx';
+import Productos from './pages/Productos.jsx';
+import Contacto from './pages/Contacto.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-        <h1>ASD.jpg</h1>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="quienes-somos" element={<QuienesSomos />} />
+          <Route path="productos">
+            <Route index element={<Productos />} />
+            <Route path=":idMarca" element={<Productos />} />
+          </Route>
+          <Route path="contacto" element={<Contacto />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
