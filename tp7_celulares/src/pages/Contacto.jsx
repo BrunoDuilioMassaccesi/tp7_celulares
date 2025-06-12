@@ -17,7 +17,12 @@ export default function Contacto() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // No action needed on submit as per requirements
+    alert('Correo enviado correctamente');
+    setFormData({
+      nombre: '',
+      email: '',
+      mensaje: '',
+    });
   };
 
   return (

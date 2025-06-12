@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { marcas } from '../data.js';
 
 export default function Header() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [Desple, Desplegable] = useState(false);
 
   return (
     <header>
@@ -19,12 +19,12 @@ export default function Header() {
             <NavLink to="/quienes-somos">Quienes somos</NavLink>
           </li>
           <li
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
+            onMouseEnter={() => Desplegable(true)}
+            onMouseLeave={() => Desplegable(false)}
             style={{ position: 'relative' }}
           >
             <span>Productos</span>
-            {dropdownOpen && (
+            {Desple && (
               <ul
                 style={{
                   position: 'absolute',
