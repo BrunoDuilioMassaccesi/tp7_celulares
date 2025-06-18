@@ -3,8 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { marcas } from '../data.js';
 
 export default function Header() {
-  const [Desple, Desplegable] = useState(false);
 
+  //la funcion deplegable la sacamos de chatgpt pq visualmente quedaba muy bien el MouseEnter => Desplegable
+  const [Desple, Desplegable] = useState(false);
   return (
     <header>
       <div className="logo">
@@ -26,6 +27,7 @@ export default function Header() {
             <span>Productos</span>
             {Desple && (
               <ul
+                //cuando le pedi a chat q me ayude con lo q esta abajo de ${marca.id} me tiro esto arriba del estilo aca en el .jsx, no entiendo muy bien la diferencia pero corre bien
                 style={{
                   position: 'absolute',
                   top: '100%',

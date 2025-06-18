@@ -5,8 +5,6 @@ import { celulares } from '../data.js';
 export default function Home() {
   const [celusRandoms, setCelusRandoms] = useState([]);
   const [carouselIndex, setCarouselIndex] = useState(0);
-
-  // Filter celulares with ids 1 to 4 for carousel
   const carouselImages = celulares.filter(cel => cel.id >= 1 && cel.id <= 4);
 
   useEffect(() => {
@@ -19,7 +17,7 @@ export default function Home() {
       setCarouselIndex((prevIndex) =>
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change image every 3 seconds
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [carouselImages.length]);
