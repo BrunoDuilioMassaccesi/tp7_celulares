@@ -5,11 +5,11 @@ import { celulares } from '../data.js';
 export default function Home() {
   const [celusRandoms, setCelusRandoms] = useState([]);
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const carouselImages = celulares.filter(cel => cel.id >= 1 && cel.id <= 4);
+  const carouselImages = celulares.filter(cel => cel.id >= 1 && cel.id <= 7);
 
   useEffect(() => {
     const Celus = [...celulares].sort(() => 0.5 - Math.random());
-    setCelusRandoms(Celus.slice(0, 3));
+    setCelusRandoms(Celus.slice(0, 6));
   }, []);
 
   useEffect(() => {

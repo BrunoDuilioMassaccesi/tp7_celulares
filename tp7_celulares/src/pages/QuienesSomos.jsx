@@ -3,6 +3,7 @@ export default function QuienesSomos() {
     <div>
       <h1>Quienes Somos</h1>
       <p>Somos una empresa líder en la venta de celulares, comprometidos con ofrecer la mejor calidad y servicio a nuestros clientes.</p>
+      <p>Comenzamos en la reventa de celulares samsung en nuestra casa y poco a poco fuimos comprando stock y publicando en paginas para luego abrir nuestro propio negocio fisico y llevar la venta de telefonos a una tienda online y fisica .</p>
       <h2>Nuestras oficinas comerciales</h2>
       <div className="office-photos">
         <img
